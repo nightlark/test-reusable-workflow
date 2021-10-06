@@ -11,7 +11,7 @@ on:
         default: 'windows-latest'
         type: string
       osmatrix:
-        default: ['windows-latest', 'ubuntu-latest']
+        default: "['windows-latest', 'ubuntu-latest']"
         type: string
 jobs:
   build:
