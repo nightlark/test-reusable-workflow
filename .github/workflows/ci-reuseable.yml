@@ -11,10 +11,9 @@ on:
         default: 'windows-latest'
         type: string
       osmatrix:
-        default: 'mat0'
+        default: ''
         type: string
 
-mat: &mat0 ['windows-latest', 'ubuntu-latest']
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -42,7 +41,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: *mat0
+        os: ['ubuntu-latest', ${{ inputs.osmatrix }}]
     steps:
       - name: Which OS?
         run: echo "Running on ${{ matrix.os }}"
