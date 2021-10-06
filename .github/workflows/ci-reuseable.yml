@@ -11,7 +11,7 @@ on:
         default: 'windows-latest'
         type: string
       osmatrix:
-        default: 'macos-latest'
+        default: ''
         type: string
 
 jobs:
