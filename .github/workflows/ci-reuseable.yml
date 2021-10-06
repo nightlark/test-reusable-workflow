@@ -40,7 +40,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: ${{ inputs.osmatrix }}
+        os: ${{ toJson(inputs.osmatrix) }}
     steps:
       - name: Which OS?
         run: echo "Running on ${{ matrix.os }}"
