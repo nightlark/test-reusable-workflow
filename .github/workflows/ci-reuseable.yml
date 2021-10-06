@@ -7,6 +7,9 @@ on:
       username:
         required: true
         type: string
+      os:
+        default: 'windows-latest'
+        type: string
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,3 +24,20 @@ jobs:
     steps:
       - name: Use an input
         run: echo "Hi ${{ inputs.username }}"
+
+  variable-os:
+    name: The OS can change!
+    runs-on: ${{ inputs.os }}
+    steps:
+      - name: Print the OS name
+        run: echo "Running on ${{ inputs.os }}"
+
+  enter-the-matrix:
+    name: Enter the Matrix
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - name: Which OS?
+        run: echo "Running on ${{ matrix.os }}""
