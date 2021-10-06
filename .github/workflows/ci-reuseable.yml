@@ -41,7 +41,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: ['ubuntu-latest', ${{inputs.osmatrix}}]
+        os: ['ubuntu-latest', '${{inputs.osmatrix}}']
     steps:
       - name: Which OS?
         run: echo "Running on ${{ matrix.os }}"
