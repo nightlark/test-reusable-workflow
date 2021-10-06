@@ -11,3 +11,4 @@ jobs:
     uses: nightlark/test-reusable-workflow/.github/workflows/ci-reuseable.yml@main
     with:
       username: ${{ github.repository }}
+      os: "macos-latest"

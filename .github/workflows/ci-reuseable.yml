@@ -40,4 +40,4 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - name: Which OS?
-        run: echo "Running on ${{ matrix.os }}""
+        run: echo "Running on ${{ matrix.os }}"
