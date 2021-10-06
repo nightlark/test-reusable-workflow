@@ -1,0 +1,12 @@
+name: CI - caller
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  custom-job:
+    uses: nightlark/test-reusable-workflow/.github/workflows/ci-reuseable.yml@main
+    with:
+      username: ${{ github.repository }}
