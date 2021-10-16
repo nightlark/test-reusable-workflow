@@ -1,4 +1,4 @@
-name: CI - caller
+name: mod CI - caller
 
 on:
   push:
