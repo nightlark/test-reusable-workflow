@@ -1,4 +1,4 @@
-name: CI - reusable
+name: mod CI - reusable
 
 # Controls when the workflow will run
 on:
